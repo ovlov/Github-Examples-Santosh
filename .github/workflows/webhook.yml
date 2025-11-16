@@ -3,7 +3,7 @@ name: "Webhook Event example"
 on:
   repository_dispatch:
     types:
-      - webhook
+      - Custom_Webhook_Event
 
 jobs:
   respond-to-dispatch:
