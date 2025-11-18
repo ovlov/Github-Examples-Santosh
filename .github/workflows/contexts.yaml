@@ -9,9 +9,6 @@ jobs:
     steps:
       env:
         MY_ACTION: ${{ github.action }}
-      - name: "Checkout repository"
-        uses: actions/checkout@v2
-
-      - name: "Print GitHub Context"
-        run: |
-          echo "Hello $MY_ACTION"
+      name: "Show context value"
+      run: |
+        echo "The action name is $MY_ACTION"
