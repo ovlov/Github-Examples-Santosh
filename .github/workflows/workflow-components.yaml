@@ -11,8 +11,14 @@ jobs:
         uses: actions/checkout@v2
 
       - name: "group logging"
-        run: 
+        run: |
           echo "::group::My Group Message"
           echo "Msg 1"
           echo "Msg 2"
           echo "::endgroup::"
+      - name: "step 1"
+        runs: |
+          echo "MY_VAL-hello" >> $GITHUB_ENV
+      -name: "step 2"
+        runs: |
+          echo "$MY_VAL"
