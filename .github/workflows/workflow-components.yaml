@@ -19,6 +19,6 @@ jobs:
       - name: "step 1"
         runs: |
           echo "MY_VAL-hello" >> $GITHUB_ENV
-      -name: "step 2"
+      - name: "step 2"
         runs: |
-          echo "$MY_VAL"
+          echo "The value of MY_VAL is $MY_VAL"    
