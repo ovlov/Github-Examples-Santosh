@@ -1,0 +1,17 @@
+name: "Contexts Example"
+
+on: [push, pull_request]
+
+jobs:
+  context_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      env:
+        MY_ACTION: ${{ github.action }}
+      - name: "Checkout repository"
+        uses: actions/checkout@v2
+
+      - name: "Print GitHub Context"
+        run: |
+          echo "Hello $MY_ACTION"
