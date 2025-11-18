@@ -10,5 +10,7 @@ jobs:
       - name: "Show context value"
         env:
           MY_ACTION: ${{ github.action }}
+          MY_ACTOR: ${{ github.actor }}
         run: |
           echo "The action name is $MY_ACTION"
+          echo "The actor is $MY_ACTOR"
