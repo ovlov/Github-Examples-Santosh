@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      env:
-        MY_ACTION: ${{ github.action }}
-      name: "Show context value"
-      run: |
-        echo "The action name is $MY_ACTION"
+      - name: "Show context value"
+        env:
+          MY_ACTION: ${{ github.action }}
+        run: |
+          echo "The action name is $MY_ACTION"
